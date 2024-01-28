@@ -1,21 +1,20 @@
-﻿// praca dzień 4
-// płeć "m" - mężczyzna "f" - Kobieta lub nie zdefiniowana
-const int age18 = 18, age30 = 30;
-const string nameEwa = "Ewa";
+﻿// praca dzień 5
+var digits = new char[] {'0','1','2','3','4','5','6','7','8','9'};
+int number = 17017;
+string numToStr = number.ToString();
+char[] numToChr = numToStr.ToCharArray();
+int i = 0;
 
-var sex = "f";
-var age = 27;
-var name = "Ewa";
-
-if (name == nameEwa && age == age30)
+Console.WriteLine("Hello, Wynik dla liczby: " + number);
+foreach (char ds in digits)
 {
-    Console.WriteLine("Ewa, lat 30");
-}
-else if (sex == "f" && age < age30)
-{
-    Console.WriteLine("Kobieta poniżej 30 lat");
-}
-else if (sex == "m" && age < age18)
-{
-    Console.WriteLine("Niepełnoletni mężczyzna");
+    i = 0;
+    foreach(char dc in numToChr)
+    {
+        if(ds == dc)
+        {
+            i++;
+        }
+    }
+    Console.WriteLine(ds + " => " + i);
 }
